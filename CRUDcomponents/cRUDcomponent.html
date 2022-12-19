@@ -1,1 +1,15 @@
-
+<template>
+ <lightning-card title="CRUD Operation">
+     <div class="slds-m-around_medium">
+        <template if:true={accObj.data}>
+         <lightning-datatable key-field="Id" 
+         data={accObj.data} 
+         columns={columns} 
+         onsave={saveHandleAction}
+         draft-values={fieldsItemValues} 
+         hide-checkbox-column 
+         show-row-number-column>
+        </lightning-datatable>
+        </template>
+    </div>
+ </lightning-card>
